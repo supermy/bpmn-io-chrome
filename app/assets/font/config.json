@@ -171,15 +171,27 @@
       "src": "fontawesome"
     },
     {
-      "uid": "70370693ada58ef0a60fa0984fe8d52a",
-      "css": "plus",
-      "code": 59392,
+      "uid": "1b5a5d7b7e3c71437f5a26befdd045ed",
+      "css": "new",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "6533bdc16ab201eb3f3b27ce989cab33",
+      "css": "open",
+      "code": 59404,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "code": 59395,
       "src": "entypo"
     },
     {
-      "uid": "a66cdc7278e6b33b8bd44a141f5e1a8d",
-      "css": "plus-circled",
-      "code": 59404,
+      "uid": "70370693ada58ef0a60fa0984fe8d52a",
+      "css": "plus",
+      "code": 59392,
       "src": "entypo"
     },
     {
@@ -195,38 +207,14 @@
       "src": "entypo"
     },
     {
-      "uid": "b08cfe8039de2ce815686aced2caef06",
-      "css": "download",
-      "code": 59397,
-      "src": "entypo"
-    },
-    {
-      "uid": "b6fc2f656ef87275889422e19550680a",
-      "css": "undo",
-      "code": 59402,
-      "src": "entypo"
-    },
-    {
-      "uid": "ec347024a3640deebeeab53fd0d5ad03",
-      "css": "redo",
-      "code": 59403,
-      "src": "entypo"
-    },
-    {
-      "uid": "0ccb084ddeeae372673793ed0b45bb4a",
-      "css": "open",
-      "code": 59395,
-      "src": "entypo"
-    },
-    {
       "uid": "465bb89b6f204234e5787c326b4ae54c",
-      "css": "ccw",
+      "css": "undo",
       "code": 59406,
       "src": "entypo"
     },
     {
       "uid": "bb46b15cb78cc4cc05d3d715d522ac4d",
-      "css": "cw",
+      "css": "redo",
       "code": 59407,
       "src": "entypo"
     },
@@ -237,16 +225,16 @@
       "src": "entypo"
     },
     {
+      "uid": "191bcf63575a78def53c907c3d3bf7f0",
+      "css": "save",
+      "code": 59405,
+      "src": "entypo"
+    },
+    {
       "uid": "e34c1d65ed4ecd53aec3687f0e5b1cf0",
       "css": "comment",
       "code": 59401,
       "src": "iconic"
-    },
-    {
-      "uid": "9e0404ba55575a540164db9a5ad511df",
-      "css": "doc-new",
-      "code": 59405,
-      "src": "elusive"
     }
   ]
 }

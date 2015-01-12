@@ -7,10 +7,10 @@
 
   <link rel="stylesheet" href="vendor/diagram-js/diagram-js.css" />
 
-  <link rel="stylesheet" href="assets/font/css/bpmnio-embedded.css" />
+  <link rel="stylesheet" href="assets/font/css/bpmnio.css" />
+  <link rel="stylesheet" href="assets/font/css/bpmnio-codes.css" />
 
-  <link rel="stylesheet" href="styles/app.css" />
-
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 
 <body class="show-diagram">
@@ -20,35 +20,52 @@
       <span class="icon-bpmn-io"></span>
     </a>
 
-    <button title="new diagram" id="new_diagram" class="icon-doc-new"></button>
-    <button title="open a file" id="choose_file" class="icon-open"></button>
+    <div class="menu-bar">
+      <button title="new BPMN diagram" id="new_diagram" class="icon-new"></button>
+      <button title="open a BPMN diagram" id="choose_file" class="icon-open"></button>
 
-    <span class="placeholder"></span>
+      <button title="save BPMN diagram" id="save_file" class="icon-save disabled"></button>
 
-    <button title="save file" id="save_file" class="icon-download"></button>
+      <span class="placeholder"></span>
 
-    <span class="placeholder"></span>
-
-    <button title="undo" id="undo" class="icon-ccw"></button>
-    <button title="redo" id="redo" class="icon-cw"></button>
+      <button title="undo" id="undo" class="icon-undo"></button>
+      <button title="redo" id="redo" class="icon-redo"></button>
+    </div>
 
     <span class="current-file" id="file_path"></span>
   </div>
 
-  <div class="bio-content tabs">
-    <div data-tab="diagram" class="tab">
-      <div id="canvas"></div>
-    </div>
+  <div class="bio-content">
 
-    <div data-tab="xml" class="tab" id="xml">
-      <textarea spellcheck="false"></textarea>
-    </div>
+    <div class="bio-diagrams tabs">
 
-    <div class="tabbar">
-      <ul>
-        <li><a href show-tab="diagram">Diagram</a></li>
-        <li><a href show-tab="xml">XML</a></li>
-      </ul>
+      <div class="tabbar tabbar-default">
+        <ul>
+          <li class="entry active"><a>simple.bpmn <button class="close">×</button></a></li>
+          <li class="entry"><a>other.bpmn <button class="close">×</button></a></li>
+          <li class="entry"><a>+</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="bio-diagram tabs">
+
+          <div data-tab="diagram" class="tab">
+            <div id="canvas"></div>
+          </div>
+
+          <div data-tab="xml" class="tab" id="xml">
+            <textarea spellcheck="false"></textarea>
+          </div>
+
+          <div class="tabbar">
+            <ul>
+              <li><a href show-tab="diagram">Diagram</a></li>
+              <li><a href show-tab="xml">XML</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

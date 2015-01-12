@@ -15,29 +15,42 @@ module.exports = function (grunt) {
     config: {
       dist: 'dist',
       src: 'app',
+      less: 'app/less',
       chrome_reload: CHROME_OPEN
     },
 
     watch: {
+      less: {
+        files: [ '<%= config.less %>/**/*.less' ],
+        tasks: [ 'less' ]
+      },
+
       dist: {
         files: [ '<%= config.dist %>/**/*' ],
         tasks: [ 'open' ]
       },
 
       app: {
-        files: [ '<%= config.src %>/**/*', '!<%= config.src %>/vendor/**/*' ],
+        files: [
+          '<%= config.src %>/**/*',
+          '!<%= config.src %>/vendor/**/*',
+          '!<%= config.less %>/**/*'
+        ],
         tasks: [ 'copy:app' ]
       }
     },
 
     copy: {
-
       app: {
         files: [{
           expand: true,
           cwd: '<%= config.src %>',
           dest: '<%= config.dist %>/',
-          src: [ '**/*', '!vendor/**/*' ]
+          src: [
+            '**/*',
+            '!vendor/**/*',
+            '!less/**/*'
+          ]
         }]
       },
 
@@ -46,6 +59,22 @@ module.exports = function (grunt) {
           src: require.resolve('diagram-js/assets/diagram-js.css'),
           dest: '<%= config.dist %>/vendor/diagram-js/diagram-js.css'
         }]
+      }
+    },
+
+
+    less: {
+      app: {
+        options: {
+          cleancss: true,
+          paths: [ '<%= config.less %>' ]
+        },
+
+        files: {
+          '<%= config.dist %>/css/app.css': [
+            '<%= config.less %>/app.less'
+          ]
+        }
       }
     },
 
